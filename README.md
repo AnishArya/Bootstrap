@@ -1,0 +1,1 @@
+This Repository contains a static 2 pages of a news website

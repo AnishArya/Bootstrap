@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sign In</title>
+    <link rel="stylesheet" type="text/css" href="signInCSS.css">
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../css/signInCSS.css">
+<link href="../css/news_style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+</style>
+
+</head>
+<body>
+
+<div><div>
+<div id="mySidenav" class="sidenav" style="display:block;">
+<center><img src="img/logo_new.png"></center>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<br /><br />
+ <center><a href="#about" onclick="closeNav()"><button id="download_btn"  class="dropdown"> <span>About Us</span></button></a>
+
+<!-- Weather widget -->
+  <a href="http://www.weathercast.co.uk/" style="padding:0;background:none" target="_blank" title="Your weather service"></a><div style="background-color:#102840;color:#00B0CA;font-family:Verdana,Arial,Tahoma,Times New Roman;font-weight:bold;font-size:10px;width:120px;text-align:center"><a href="http://www.weathercast.co.uk/world-weather/city-weather/city/44X21/london.html" target="_blank" style="color:#00B0CA;font-family:Verdana,Arial,Tahoma,Times New Roman;font-weight:bold;font-size:10px;padding:0;background:none" title="Detailed weather forecast for Weather London">Weather London</a></div><iframe width="120" height="151" scrolling="no" frameborder="0" src="http://www.weathercast.co.uk/meteo/hptool/index.php?cid=44X21&cityName=London&l=en&style=1&v=gb&ver=2&c1=00B0CA&c2=102840&c3=102840&c4=ffffff&c5=102840&c6=ffffff&c7=102840&f1a=1&f1b=2&f2a=1&f2b=1&f3a=1&f3b=1&ct1=1&ct2=2&ct3=6&ct4=10&ct5=12&fcd=0"></iframe><div style="height:14px;width:120px;text-align:center;background-color:#f8b920"><a href="http://www.weathercast.co.uk/" target="_blank" style="background:none;padding:0;text-decoration:none;color:#000000;font-family:Verdana,Arial,Tahoma,Times New Roman;font-weight:bold;font-size:10px" title="Latest weather observations and 14 day forecasts for over 2 MM locations worldwide">&copy; thehindu.com</a></div>
+<!-- Weather widget ends here -->
+</center>
+</div>
+
+<!-- Navigation bar starts here -->
+<nav class="navbar navbar-default navbar-fixed-top" id="headNavbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>      
+         </button>
+         <!--
+         <h1 align="center"><img src="logo_new.png"></h1>
+<div id="snackbar">Your download will begin shortly &#128515</div>
+ &#8964 down
+         -->
+          <a id="menu" class="navbar-brand" data-toggle="tooltip" title="It's Hot!" ><img src="../img/logo_new.png" style="height: 20px; width: 150px;" id="menu"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class=" li nav navbar-nav">
+          <li class="navbar-default"><a href="../index.html" class="topnav-icons fa fa-home w3-left w3-bar-item w3-button" title="Home">&#127968</a></li>
+          <li ><a href="../index.html#iNews">Recommended</a></li>
+
+          <li><a href="../index.html#live">Go Live</a></li>
+            <li><a href="../index.html#about">About Us</a></li>
+      <li><a class="dropdown-toggle" data-toggle="dropdown" href="#">Download App<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="../app/the_hindu.apk" download>Andriod</a></li>
+          <li><a href="../app/the_hindu.apk" download>Mac OS</a></li>
+          <li><a href="../app/the_hindu.apk" download>Windows Phone</a></li>
+        </ul>
+      </li>
+          </ul>
+
+          <ul class="li nav navbar-nav navbar-right" id="navbarRight">
+            <li id="li-right"><a href="#">Register</a></li>
+            <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="button" class="btn btn-info">
+      <span class="glyphicon glyphicon-search"></span> Search
+    </button>
+      </form>
+          </ul>
+        </div>
+      </div>
+    </nav>
+<!-- Navigation bar ends here -->
+</div>
+<center><img src="../img/logo_new.png" ></center>
+<div class="container w3-center" ></div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4">
+            <h1 class="text-center login-title">Sign in to continue</h1>
+            <div class="account-wall">
+                <img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
+                    alt="">
+                <form class="form-signin"  action="../index.html" data-toggle="tooltip" title="One Click Away!" method="post">
+                <input type="text" class="form-control" placeholder="Email" required autofocus>
+                <input id="passkey" type="password" class="form-control" placeholder="Password" required >
+               <div><center><a onclick="javascript:showOrHidePassword()" id="tooltipOnShowPasswordLink" style="padding: auto;"><i id="tooltipOnShowPasswordLink2" data-toggle="tooltip" title="Show Passkey!" class="glyphicon glyphicon-eye-open" style="padding: auto;"></i></a></center></div>
+<!-- script for tooltipOnShowPasswordLink -->
+<script type="text/javascript">
+    var count = 0;
+    function showOrHidePassword() {
+  if(count%2 == 0) {
+    var obj = document.getElementById('passkey');
+    var tooltipOnShowPasswordLink = document.getElementById('tooltipOnShowPasswordLink');
+    var tooltipOnShowPasswordLink2 = document.getElementById('tooltipOnShowPasswordLink2');
+    tooltipOnShowPasswordLink2.title = "Hide Passkey";
+    obj.type = "text";
+    
+    count++;
+  } else {
+
+    var tooltipOnShowPasswordLink = document.getElementById('tooltipOnShowPasswordLink');
+    var tooltipOnShowPasswordLink2 = document.getElementById('tooltipOnShowPasswordLink2');
+    tooltipOnShowPasswordLink2.title = "Show Passkey";
+    var obj = document.getElementById('passkey');
+    tooltipOnShowPasswordLink.class = "glyphicon glyphicon-eye-close";
+    obj.type = "password";
+    
+  count++;
+  }
+}
+</script>
+                        <button class="btn btn-lg btn-primary btn-block" style="margin-top: 5px;" type="submit">Sign in</button>
+                <label class="checkbox pull-left">
+                    <input type="checkbox" value="remember-me">
+                    Remember me
+                </label>
+                <a href="#" class="pull-right need-help" style="color: blue;">Need help? </a><span class="clearfix"></span>
+                </form>
+            </div>
+           <center> <button type="button" class="btn btn-info text-center new-account">
+            <span class="glyphicon"></span> New User ?
+            </button></center>
+            <!-- <a href="#" class="text-center new-account">Create an account </a> -->
+        </div>
+    </div>
+</div>
+</body>
+</html>

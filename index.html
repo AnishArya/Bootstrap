@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>The Hindu</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/signInCSS.css">
+<link href="css/news_style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+</style>
+<style>
+  body{   
+    padding:20px;
+    background-color: whitesmoke;
+  }
+</style>
+<body>
+
+<div id="mySidenav" class="sidenav" style="display:block;">
+<center><img src="img/logo_new.png"></center>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<br /><br />
+ <center><a href="#about" onclick="closeNav()"><button id="download_btn"  class="dropdown"> <span>About Us</span></button></a>
+
+<!-- Weather widget -->
+  <a href="http://www.weathercast.co.uk/" style="padding:0;background:none" target="_blank" title="Your weather service"></a><div style="background-color:#102840;color:#00B0CA;font-family:Verdana,Arial,Tahoma,Times New Roman;font-weight:bold;font-size:10px;width:120px;text-align:center"><a href="http://www.weathercast.co.uk/world-weather/city-weather/city/44X21/london.html" target="_blank" style="color:#00B0CA;font-family:Verdana,Arial,Tahoma,Times New Roman;font-weight:bold;font-size:10px;padding:0;background:none" title="Detailed weather forecast for Weather London">Weather London</a></div><iframe width="120" height="151" scrolling="no" frameborder="0" src="http://www.weathercast.co.uk/meteo/hptool/index.php?cid=44X21&cityName=London&l=en&style=1&v=gb&ver=2&c1=00B0CA&c2=102840&c3=102840&c4=ffffff&c5=102840&c6=ffffff&c7=102840&f1a=1&f1b=2&f2a=1&f2b=1&f3a=1&f3b=1&ct1=1&ct2=2&ct3=6&ct4=10&ct5=12&fcd=0"></iframe><div style="height:14px;width:120px;text-align:center;background-color:#f8b920"><a href="http://www.weathercast.co.uk/" target="_blank" style="background:none;padding:0;text-decoration:none;color:#000000;font-family:Verdana,Arial,Tahoma,Times New Roman;font-weight:bold;font-size:10px" title="Latest weather observations and 14 day forecasts for over 2 MM locations worldwide">&copy; thehindu.com</a></div>
+<!-- Weather widget ends here -->
+</center>
+</div>
+
+<!-- Navigation bar starts here -->
+<nav class="navbar navbar-default navbar-fixed-top" id="headNavbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>      
+         </button>
+         <!--
+         <h1 align="center"><img src="logo_new.png"></h1>
+<div id="snackbar">Your download will begin shortly &#128515</div>
+ &#8964 down
+         -->
+          <a id="menu" class="navbar-brand" data-toggle="tooltip" title="It's Hot!" onclick="openNav()" ><img src="img/logo_new.png" style="height: 20px; width: 150px;" id="menu"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class=" li nav navbar-nav">
+          <li class="navbar-default"><a href="#" onclick="closeNav()" class="topnav-icons fa fa-home w3-left w3-bar-item w3-button" title="Home">&#127968</a></li>
+          <li ><a href="#iNews" onclick="closeNav()">Recommended</a></li>
+
+          <li><a href="#live" onclick="closeNav()">Go Live</a></li>
+            <li><a href="#about" onclick="closeNav()">About Us</a></li>
+            <li><a class="dropdown-toggle" data-toggle="dropdown" href="#" onclick="closeNav()">Category<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#" onclick="closeNav()">Sports</a></li>
+          <li><a href="#" onclick="closeNav()">Tech</a></li>
+          <li><a href="#" onclick="closeNav()">Front</a></li>
+        </ul>
+      </li>
+      <li><a class="dropdown-toggle" data-toggle="dropdown" href="#" onclick="closeNav()">Download App<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="app/the_hindu.apk" download onclick="closeNav()">Andriod</a></li>
+          <li><a href="app/the_hindu.apk" download onclick="closeNav()">Mac OS</a></li>
+          <li><a href="app/the_hindu.apk" download onclick="closeNav()">Windows Phone</a></li>
+        </ul>
+      </li>
+          </ul>
+
+          <ul class="li nav navbar-nav navbar-right" id="navbarRight">
+            <li id="li-right"><a href="#Register.html" onclick="closeNav()">Register</a></li>
+            <li ><a href="html/index_signIn.html" onclick="closeNav()">Sign In</a></li>
+            <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="button" class="btn btn-info">
+      <span class="glyphicon glyphicon-search"></span> Search
+    </button>
+      </form>
+          </ul>
+        </div>
+      </div>
+    </nav>
+<!-- Navigation bar ends here -->
+<nav class="navbar navbar-default container w3-padding-16" id="ticker">    
+<script src="http://widgets.freestockcharts.com/js/jquery-1.3.1.min.js" type="text/javascript"></script> <script src="http://widgets.freestockcharts.com/script/WBIHorizontalTicker2.js?ver=12334" type="text/javascript"></script>        
+    <font size="3" face="Verdana" >
+      <marquee class="nav navbar-nav w3-padding-16" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();" scrollamount="8" >
+<link href="http://widgets.freestockcharts.com/WidgetServer/WBITickerblue.css" rel="stylesheet" type="text/css" />
+      </marquee>
+    </font>
+    <script>
+    var gainTicker = new WBIHorizontalTicker('gainers');
+    gainTicker.start();
+  </script> 
+  <script>
+    var loserTicker = new WBIHorizontalTicker('losers');
+    loserTicker.start();
+  </script>
+
+</nav>
+
+<div class="container" id="main" style="height: 70%;">
+  <h2 align="center" id="topShots">TOP SHOTS</h2>  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      
+      <div class="item active">
+        <img src="img/messi.png" alt="Messi" style="width: 100%;">
+      </div>
+    
+      <div class="item">
+        <img src="img/wall.png" alt="Wall" style="width: 100%;">
+      </div>
+      <div class="item ">
+        <img src="img/neymar.png" alt="Neymar" style="width: 100%;">
+      </div>
+    </div>
+
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:50px">
+
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center" id="iNews">
+    <div class="w3-quarter">
+      <img src="img/messi.png" alt="messi" style="width:100%">
+      <h3>The Perfect Mix, A real Euro clash</h3>
+      <p>Barca meats RM in a classic clash this sunday.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="img/army.png" alt="army" style="width:100%">
+      <h3>China's Invasion - A serious issue</h3>
+      <p>China is with Pak, says Nawaz.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="img/neymar.png" alt="neymar" style="width:100%">
+      <h3>From Barca to PSG</h3>
+      <p>Left Barca and here's what Neymar Jr said.</p>
+      <p>What else?</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="img/wall.png" alt="Wall" style="width:100%">
+      <h3>73 and still young</h3>
+      <p>73 year old man developed a mobile application.</p>
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+     <img src="img/messi.png" alt="messi" style="width:100%">
+      <h3>The Perfect Mix, A real Euro clash</h3>
+      <p>Barca meats RM in a classic clash this sunday.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="img/army.png" alt="army" style="width:100%">
+      <h3>China's Invasion - A serious issue</h3>
+      <p>China is with Pak, says Nawaz.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="img/neymar.png" alt="neymar" style="width:100%">
+      <h3>From Barca to PSG</h3>
+      <p>Left Barca and here's what Neymar Jr said.</p>
+      <p>What else?</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="img/wall.png" alt="Wall" style="width:100%">
+      <h3>73 and still young</h3>
+      <p>73 year old man developed a mobile application.</p>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+  
+  <hr id="about">
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32 w3-center">  
+    <h3>About Me, The Hindu</h3><br>
+    <img src="img/logo_new.png" alt="Me" class="w3-image" style="display:block;margin:auto" width="auto" height="auto">
+    <div class="w3-padding-32">
+      <h4><b>I am Who I Am!</b></h4>
+      <h6><i>With Passion For Real, Good iNews</i></h6>
+      <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</p><p>The Hindu is an English-language Indian daily newspaper. Headquartered at Chennai, The Hindu was published weekly when it was launched in 1878, and started publishing daily in 1889.</p>
+    </div>
+  </div>
+  <hr>
+  
+
+<!-- 16:9 aspect ratio -->
+<div id="live" class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/y60wDzZt8yg?rel=0&autoplay=1"></iframe><!-- -->
+</div>
+
+  <!-- Footer -->
+  <footer class="w3-row-padding w3-padding-32">
+    <div class="w3-third">
+      <h3>FOOTER</h3>
+      <p>mailto: anish.5.arya@niit-tech.com</p>
+      <p>Powered by <a href="#" target="_blank">&copy; www.thehindu.com</a></p>
+    </div>
+  
+    <div class="w3-third">
+      <h3>BLOG POSTS</h3>
+      <ul class="w3-ul w3-hoverable">
+        <li class="w3-padding-16">
+          <img src="img/messi.png" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Lorem</span><br>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w3-third w3-serif" id="popularTags">
+      <h3>POPULAR TAGS</h3>
+      <p>
+        <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dinner</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Salmon</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">France</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Drinks</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Flavors</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Cuisine</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Chicken</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dressing</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fried</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fish</span>
+      </p>
+    </div>
+  </footer>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("menu").style.display="none";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+     document.getElementById("menu").style.display="block";
+}
+
+</script>
+
+<script>
+function openNav() {
+	 
+    document.getElementById("mySidenav").style.width = "100%";
+    document.getElementById("mySidenav").style.display="block";
+    document.getElementById("menu").style.display="none";
+    document.body.style.backgroundColor = "whitesmoke";
+}
+
+function closeNav() {
+	document.getElementById("mySidenav").style.display = "none";
+    document.getElementById("mySidenav").style.width = "0";
+     document.getElementById("menu").style.display="block";
+}
+
+</script>
+
+</body>
+</html>
